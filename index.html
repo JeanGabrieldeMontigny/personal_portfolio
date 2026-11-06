@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Jean-Gabriel de Montigny is a full-stack developer in Ottawa who builds accessible, bilingual internal tools and deploys them end to end.">
+  <title>Jean-Gabriel de Montigny | Full-stack developer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="site-name" href="#top">Jean-Gabriel de Montigny</a>
+      <nav aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="chip" id="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="page-title">
+      <div class="wrap hero-grid">
+        <div>
+          <h1 id="page-title">Jean-Gabriel de Montigny</h1>
+          <p class="headline">Full-stack developer and part-time graduate student in applied data science</p>
+          <p class="message">I build and ship internal tools end to end, and make them work in both official languages.</p>
+          <p class="actions">
+            <a class="button button-primary" href="https://www.linkedin.com/in/jean-gabriel-de-montigny-a515a11b7/">View my LinkedIn profile</a>
+            <a class="button button-secondary" href="#contact">Email me</a>
+          </p>
+        </div>
+
+        <aside class="title-block" aria-label="At a glance">
+          <dl>
+            <div><dt>Role</dt><dd>Software Developer, Statistics Canada</dd></div>
+            <div><dt>Studying</dt><dd>Master’s in Digital Transformation and Innovation, University of Ottawa (expected 2027)</dd></div>
+            <div><dt>Languages</dt><dd>English and French, fully bilingual</dd></div>
+            <div><dt>Based in</dt><dd>Ottawa, Ontario</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <h2 id="about-title">About</h2>
+        <div class="prose">
+          <p>I’m a full-stack developer at Statistics Canada, where I’m the sole developer on a set of internal web applications that analysts use every day. I work across the whole stack: React and TypeScript interfaces, FastAPI services, and automated pipelines that test and deploy to Kubernetes. Accessibility and English–French parity are part of every build, not an afterthought. I’m also completing a part-time master’s in Digital Transformation and Innovation, with a concentration in Applied Data Science, at the University of Ottawa. I’m looking for software roles where I can keep shipping reliable, well-tested tools while growing my skills in data and machine learning.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <h2 id="skills-title">Skills</h2>
+        <ul class="skills">
+          <li>
+            <h3>Full-stack web development</h3>
+            <p>React, TypeScript and Vite interfaces on a shared Material UI theme, backed by FastAPI and PostgreSQL services.</p>
+          </li>
+          <li>
+            <h3>Delivery and deployment</h3>
+            <p>GitLab CI/CD pipelines, Docker containers, and Kubernetes deployments with Helm and Octopus Deploy.</p>
+          </li>
+          <li>
+            <h3>Testing and quality</h3>
+            <p>Playwright end-to-end tests, Vitest and pytest, linting, and container and dependency scanning.</p>
+          </li>
+          <li>
+            <h3>Accessible, bilingual interfaces</h3>
+            <p>Applications built to Government of Canada accessibility standards, with full English and French parity.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <h2 id="experience-title">Experience, projects and education</h2>
+
+        <div class="filters" id="filters" role="group" aria-label="Filter by type" hidden>
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-filter="work" aria-pressed="false">Work</button>
+          <button class="chip" type="button" data-filter="project" aria-pressed="false">Projects</button>
+          <button class="chip" type="button" data-filter="education" aria-pressed="false">Education</button>
+        </div>
+        <p class="filter-status" id="filter-status" role="status"></p>
+
+        <ul class="log">
+          <li class="entry" data-category="work">
+            <div class="entry-meta">
+              <p class="entry-type">Work</p>
+              <p>Apr 2026 to present</p>
+            </div>
+            <div class="entry-body">
+              <h3>Software Developer, Statistics Canada</h3>
+              <p class="entry-org">Ottawa, Ontario. Part-time, alongside graduate studies.</p>
+              <ul>
+                <li>Sole developer on six internal web applications used by survey analysts.</li>
+                <li>Migrated the frontend from Shiny for Python to React and TypeScript with Vite, then retired the legacy stack.</li>
+                <li>Built every interface to Government of Canada accessibility standards with full English and French parity. Rebuilding the end-to-end tests surfaced five accessibility defects, which I fixed in the applications rather than working around them in the tests.</li>
+                <li>Created a shared Material UI theme and virtualized data grid reused across all six applications. Working with the analysts who use them removed four manual steps from their workflow.</li>
+                <li>Designed the FastAPI backends with PostgreSQL and Azure Blob Storage, and extended the Entra ID sign-in flow through Kubernetes ingress with Redis token caching.</li>
+                <li>Own the GitLab CI/CD pipeline: type checking, linting, unit and Playwright tests, security scanning, release and deployment.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="entry" data-category="work">
+            <div class="entry-meta">
+              <p class="entry-type">Work</p>
+              <p>Jan 2025 to Apr 2026</p>
+            </div>
+            <div class="entry-body">
+              <h3>Data Production and Dissemination Officer, Statistics Canada</h3>
+              <p class="entry-org">Began as a software development co-op student.</p>
+              <ul>
+                <li>Co-op term (Jan to Mar 2025): migrated data analysis processes from SAS to Python and tested the migrated code to confirm data integrity.</li>
+                <li>Developed custom logic modules for a division-wide survey processing pipeline, including a derived-variable calculator applied across health, business and education surveys.</li>
+                <li>Wrote and deployed Python scripts that automate data correction, reducing file processing times by 50%.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="entry" data-category="work">
+            <div class="entry-meta">
+              <p class="entry-type">Work</p>
+              <p>Jan to Dec 2022</p>
+            </div>
+            <div class="entry-body">
+              <h3>Fibe TV App Trial Manager (co-op), Bell</h3>
+              <p class="entry-org">Ottawa, Ontario</p>
+              <ul>
+                <li>Identified and helped resolve more than 50 bugs.</li>
+                <li>Grew trial participation from 150 to over 300 by consolidating smaller programs.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="entry" data-category="project">
+            <div class="entry-meta">
+              <p class="entry-type">Project</p>
+              <p>2025 to present</p>
+            </div>
+            <div class="entry-body">
+              <h3>Algorithmic trading platform</h3>
+              <p class="entry-org">Personal project, successor to my undergraduate capstone.</p>
+              <p>A semi-automated swing-trading pipeline. The capstone used news sentiment analysis (FinBERT and DeepSeek R1) and LSTM price prediction. The current version runs locally as a multi-service Docker Compose stack: a FastAPI backend, a Next.js and TypeScript dashboard, PostgreSQL with TimescaleDB, and Redis. It ingests market, news and macro data on a schedule, generates signals, and sends risk-validated trade proposals through a human approval step. The CI pipeline runs more than 600 unit tests and static analysis that enforces boundaries between layers. Selected components are under continued development toward my graduate thesis work.</p>
+            </div>
+          </li>
+
+          <li class="entry" data-category="education">
+            <div class="entry-meta">
+              <p class="entry-type">Education</p>
+              <p>Jan 2026 to expected 2027</p>
+            </div>
+            <div class="entry-body">
+              <h3>Master of Digital Transformation and Innovation</h3>
+              <p class="entry-org">University of Ottawa. Concentration in Applied Data Science, part-time.</p>
+            </div>
+          </li>
+
+          <li class="entry" data-category="education">
+            <div class="entry-meta">
+              <p class="entry-type">Education</p>
+              <p>Sept 2020 to June 2025</p>
+            </div>
+            <div class="entry-body">
+              <h3>Bachelor of Applied Science, Software Engineering</h3>
+              <p class="entry-org">University of Ottawa. Management and Entrepreneurship option.</p>
+            </div>
+          </li>
+
+          <li class="entry" data-category="education">
+            <div class="entry-meta">
+              <p class="entry-type">Education</p>
+              <p>2025</p>
+            </div>
+            <div class="entry-body">
+              <h3>DataCamp certifications</h3>
+              <p class="entry-org">Supervised Learning with scikit-learn. Unsupervised Learning in Python.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 id="contact-title">Contact</h2>
+        <div class="prose">
+          <p>If you’re hiring for a software role or want to talk about my work, I’d like to hear from you.</p>
+          <p class="actions">
+            <a class="button button-primary" href="https://www.linkedin.com/in/jean-gabriel-de-montigny-a515a11b7/">View my LinkedIn profile</a>
+            <a class="button button-secondary" id="email-link" href="mailto:jeangabrieldemontigny@gmail.com">jeangabrieldemontigny@gmail.com</a>
+            <button class="chip" id="copy-email" type="button" hidden>Copy email address</button>
+          </p>
+          <p class="copy-status" id="copy-status" role="status"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Jean-Gabriel de Montigny. Built with plain HTML, CSS and JavaScript.</p>
+    </div>
+  </footer>
+</body>
+</html>
