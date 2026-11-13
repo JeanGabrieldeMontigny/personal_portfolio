@@ -32,7 +32,7 @@
       <div class="wrap hero-grid">
         <div>
           <h1 id="page-title">Jean-Gabriel de Montigny</h1>
-          <p class="headline">Full-stack developer and part-time graduate student in applied data science</p>
+          <p class="headline">Full-stack developer and graduate student in applied data science</p>
           <p class="message">I build and ship internal tools end to end, and make them work in both official languages.</p>
           <p class="actions">
             <a class="button button-primary" href="https://www.linkedin.com/in/jean-gabriel-de-montigny-a515a11b7/">View my LinkedIn profile</a>
@@ -43,7 +43,7 @@
         <aside class="title-block" aria-label="At a glance">
           <dl>
             <div><dt>Role</dt><dd>Software Developer, Statistics Canada</dd></div>
-            <div><dt>Studying</dt><dd>Master’s in Digital Transformation and Innovation, University of Ottawa (expected 2027)</dd></div>
+            <div><dt>Studying</dt><dd>MSc in Digital Transformation and Innovation, University of Ottawa (expected 2027)</dd></div>
             <div><dt>Languages</dt><dd>English and French, fully bilingual</dd></div>
             <div><dt>Based in</dt><dd>Ottawa, Ontario</dd></div>
           </dl>
@@ -55,7 +55,7 @@
       <div class="wrap">
         <h2 id="about-title">About</h2>
         <div class="prose">
-          <p>I’m a full-stack developer at Statistics Canada, where I’m the sole developer on a set of internal web applications that analysts use every day. I work across the whole stack: React and TypeScript interfaces, FastAPI services, and automated pipelines that test and deploy to Kubernetes. Accessibility and English–French parity are part of every build, not an afterthought. I’m also completing a part-time master’s in Digital Transformation and Innovation, with a concentration in Applied Data Science, at the University of Ottawa. I’m looking for software roles where I can keep shipping reliable, well-tested tools while growing my skills in data and machine learning.</p>
+          <p>I’m a full-stack developer at Statistics Canada, where I led the replacement of six aging internal survey-processing tools as the sole developer, rebuilding them on an open-source stack. I work across the whole stack: React and TypeScript interfaces, FastAPI services, and automated pipelines that test and deploy to Azure and Kubernetes. Accessibility and English–French parity are part of every build, not an afterthought. I’m also completing a thesis-based master’s in Digital Transformation and Innovation, with a concentration in Applied Data Science, at the University of Ottawa, where I’m studying whether a council of several AI models can be more accurate than a single one. I’m looking for software roles where I can keep shipping reliable, well-tested tools while growing my skills in data and machine learning.</p>
         </div>
       </div>
     </section>
@@ -66,15 +66,15 @@
         <ul class="skills">
           <li>
             <h3>Full-stack web development</h3>
-            <p>React, TypeScript and Vite interfaces on a shared Material UI theme, backed by FastAPI and PostgreSQL services.</p>
+            <p>React, TypeScript and Vite frontends with Material UI and TanStack Table, over FastAPI services with PostgreSQL and Azure Blob Storage.</p>
           </li>
           <li>
             <h3>Delivery and deployment</h3>
-            <p>GitLab CI/CD pipelines, Docker containers, and Kubernetes deployments with Helm and Octopus Deploy.</p>
+            <p>GitLab CI/CD pipelines, Docker containers, and Kubernetes deployments on Azure with Argo Workflows and Octopus Deploy.</p>
           </li>
           <li>
             <h3>Testing and quality</h3>
-            <p>Playwright end-to-end tests, Vitest and pytest, linting, and container and dependency scanning.</p>
+            <p>pytest, Vitest and Playwright end-to-end tests, linting, and container and dependency scanning.</p>
           </li>
           <li>
             <h3>Accessible, bilingual interfaces</h3>
@@ -104,14 +104,15 @@
             </div>
             <div class="entry-body">
               <h3>Software Developer, Statistics Canada</h3>
-              <p class="entry-org">Ottawa, Ontario. Part-time, alongside graduate studies.</p>
+              <p class="entry-org">Ottawa, Ontario. Alongside graduate studies.</p>
               <ul>
-                <li>Sole developer on six internal web applications used by survey analysts.</li>
-                <li>Migrated the frontend from Shiny for Python to React and TypeScript with Vite, then retired the legacy stack.</li>
-                <li>Built every interface to Government of Canada accessibility standards with full English and French parity. Rebuilding the end-to-end tests surfaced five accessibility defects, which I fixed in the applications rather than working around them in the tests.</li>
-                <li>Created a shared Material UI theme and virtualized data grid reused across all six applications. Working with the analysts who use them removed four manual steps from their workflow.</li>
-                <li>Designed the FastAPI backends with PostgreSQL and Azure Blob Storage, and extended the Entra ID sign-in flow through Kubernetes ingress with Redis token caching.</li>
-                <li>Own the GitLab CI/CD pipeline: type checking, linting, unit and Playwright tests, security scanning, release and deployment.</li>
+                <li>Led the replacement of six aging internal survey-processing tools built on SAS and other proprietary legacy software, as sole developer and main point of contact. Rebuilt them on an open-source stack, eliminating legacy software costs, and was recognized by upper management with an appreciation award for outstanding contribution.</li>
+                <li>Built each application end to end, with React and TypeScript frontends over FastAPI backends with PostgreSQL and Azure Blob Storage. They meet Government of Canada accessibility standards in English and French and cut four manual steps for analysts.</li>
+                <li>Created a shared Material UI theme and virtualized data grid reused across all six applications, refining the visual details with the analysts who use them.</li>
+                <li>Rebuilding the end-to-end tests surfaced five accessibility defects, which I fixed in the applications rather than working around them in the tests.</li>
+                <li>Presented the project at a division all-staff meeting, then ran live demos and onboarding sessions with the processing teams, shortening the transition by two months.</li>
+                <li>Deployed the applications to production on Azure and Kubernetes, replacing manual local builds with browser access. Moved to workload identity and federated credentials to stop pods crashing when scheduled routines requested tokens at once.</li>
+                <li>Own the GitLab CI/CD pipeline that keeps code quality and documentation current: unit, component and Playwright end-to-end tests, container and dependency scanning, and documentation rebuilt on every merge. Moving heavy stages to a daily scheduled run, to fit limited shared runner capacity, cut commit pipelines from 12–15 minutes to 2–3.</li>
               </ul>
             </div>
           </li>
@@ -125,9 +126,10 @@
               <h3>Data Production and Dissemination Officer, Statistics Canada</h3>
               <p class="entry-org">Began as a software development co-op student.</p>
               <ul>
-                <li>Co-op term (Jan to Mar 2025): migrated data analysis processes from SAS to Python and tested the migrated code to confirm data integrity.</li>
-                <li>Developed custom logic modules for a division-wide survey processing pipeline, including a derived-variable calculator applied across health, business and education surveys.</li>
-                <li>Wrote and deployed Python scripts that automate data correction, reducing file processing times by 50%.</li>
+                <li>Co-op term (Jan to Mar 2025): migrated data analysis processes from SAS to Python and validated the outputs against the originals, preserving data integrity while improving performance and reducing operational costs.</li>
+                <li>Built reusable logic modules for a division-wide survey processing pipeline, including a derived-variable calculator now applied across health, business and education survey programs.</li>
+                <li>Built the first web interfaces for the shared pipeline modules, establishing patterns later extended into the harmonized applications.</li>
+                <li>Automated manual data correction with Python scripts, reducing file processing time by 50%.</li>
               </ul>
             </div>
           </li>
@@ -142,7 +144,7 @@
               <p class="entry-org">Ottawa, Ontario</p>
               <ul>
                 <li>Identified and helped resolve more than 50 bugs.</li>
-                <li>Grew trial participation from 150 to over 300 by consolidating smaller programs.</li>
+                <li>Grew trial participation from 150 to over 300 testers by consolidating smaller programs.</li>
               </ul>
             </div>
           </li>
@@ -155,7 +157,13 @@
             <div class="entry-body">
               <h3>Algorithmic trading platform</h3>
               <p class="entry-org">Personal project, successor to my undergraduate capstone.</p>
-              <p>A semi-automated swing-trading pipeline. The capstone used news sentiment analysis (FinBERT and DeepSeek R1) and LSTM price prediction. The current version runs locally as a multi-service Docker Compose stack: a FastAPI backend, a Next.js and TypeScript dashboard, PostgreSQL with TimescaleDB, and Redis. It ingests market, news and macro data on a schedule, generates signals, and sends risk-validated trade proposals through a human approval step. The CI pipeline runs more than 600 unit tests and static analysis that enforces boundaries between layers. Selected components are under continued development toward my graduate thesis work.</p>
+              <p>The capstone used news sentiment analysis (FinBERT and DeepSeek R1) and LSTM price prediction. This version is a swing-trading pipeline that ingests market, macro and news data on a schedule and produces risk-checked trade proposals gated by human approval.</p>
+              <ul>
+                <li>Multi-service Docker Compose stack: FastAPI backend, Next.js and TypeScript dashboard, PostgreSQL with TimescaleDB, and Redis.</li>
+                <li>Interactive Brokers bracket-order execution with paper and live guards, reconciliation and a kill switch.</li>
+                <li>An “AI Council” of five LLM reviewers, which forms the basis of my master’s thesis.</li>
+                <li>CI pipeline with more than 600 unit tests and static analysis that enforces boundaries between layers.</li>
+              </ul>
             </div>
           </li>
 
@@ -165,8 +173,9 @@
               <p>Jan 2026 to expected 2027</p>
             </div>
             <div class="entry-body">
-              <h3>Master of Digital Transformation and Innovation</h3>
-              <p class="entry-org">University of Ottawa. Concentration in Applied Data Science, part-time.</p>
+              <h3>MSc in Digital Transformation and Innovation (thesis)</h3>
+              <p class="entry-org">University of Ottawa. Concentration in Applied Data Science.</p>
+              <p>Thesis, working title: Is a multi-model “AI council” more accurate than a single model?</p>
             </div>
           </li>
 
